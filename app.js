@@ -49,24 +49,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-const mailOptions = {
-    from: 'andranikbaldryan55@gmail.com',
-    to: 'artyom.panoyan.86@gmail.com',
-    subject: 'Ando sarcat server',
-    text: 'tobi pizda',
-    html: '<h1>Fuuuuuck you and you and youuuuuu i </h1><p>Get your <b>Tesla</b> today!</p><button>neobijaysya</button>'
-};
-
-
-
-
-transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log('Email sent: ' + info.response);
-    }
-});
 
 start()
 
