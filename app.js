@@ -2,8 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const bodyParser = require('body-parser');
 const cors = require("cors")
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+
 
 const user = require("./routers/User.routes.js")
 
@@ -41,13 +40,7 @@ const start = async () => {
     }
 }
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: `${process.env.EMAIL}`,
-        pass: `${process.env.EMAILPASSWORD}`
-    }
-});
+
 
 
 start()
